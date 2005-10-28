@@ -1,5 +1,5 @@
-Summary:	X.org keyboard driver
-Summary(pl):	Sterownik klawiatury dla X.org
+Summary:	X.org keyboard input drivers
+Summary(pl):	Sterowniki wej¶ciowe klawiatury dla X.org
 Name:		xorg-driver-input-keyboard
 Version:	1.0.0.1
 Release:	0.1
@@ -18,10 +18,12 @@ BuildRequires:	xorg-xserver-server-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-X.org keyboard driver.
+X.org keyboard input drivers. They support the standard OS-provided
+keyboard interface.
 
 %description -l pl
-Sterownik klawiatury dla X.org.
+Sterowniki wej¶ciowe klawiatury dla X.org. Obs³uguj± standardowy
+interfejs klawiatury udostêpniany przez system operacyjny.
 
 %prep
 %setup -q -n xf86-input-keyboard-%{version}
@@ -51,5 +53,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/xorg/modules/input/*.so
-%{_mandir}/man4/*.4x*
+%attr(755,root,root) %{_libdir}/xorg/modules/input/kbd_drv.so
+%attr(755,root,root) %{_libdir}/xorg/modules/input/keyboard_drv.so
+%{_mandir}/man4/kbd.4x*
+%{_mandir}/man4/keyboard.4x*
