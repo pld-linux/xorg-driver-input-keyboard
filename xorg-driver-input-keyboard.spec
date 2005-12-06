@@ -1,12 +1,12 @@
 Summary:	X.org keyboard input drivers
 Summary(pl):	Sterowniki wej¶ciowe klawiatury dla X.org
 Name:		xorg-driver-input-keyboard
-Version:	1.0.1
+Version:	1.0.1.1
 Release:	0.1
 License:	MIT
 Group:		X11/Applications
-Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC2/driver/xf86-input-keyboard-%{version}.tar.bz2
-# Source0-md5:	2b43009e520f4196be27411e5745a7ef
+Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC3/driver/xf86-input-keyboard-%{version}.tar.bz2
+# Source0-md5:	39b536b8e90dde45e6a4c1d254b28bb3
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
@@ -15,7 +15,7 @@ BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	xorg-proto-inputproto-devel
 BuildRequires:	xorg-proto-kbproto-devel
 BuildRequires:	xorg-proto-randrproto-devel
-BuildRequires:	xorg-util-util-macros >= 0.99.1
+BuildRequires:	xorg-util-util-macros >= 0.99.2
 BuildRequires:	xorg-xserver-server-devel >= 0.99.3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -45,8 +45,7 @@ interfejs klawiatury udostêpniany przez system operacyjny.
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT \
-	drivermandir=%{_mandir}/man4
+	DESTDIR=$RPM_BUILD_ROOT
 
 rm -f $RPM_BUILD_ROOT%{_libdir}/xorg/modules/*/*.la
 
@@ -58,5 +57,5 @@ rm -rf $RPM_BUILD_ROOT
 %doc ChangeLog
 %attr(755,root,root) %{_libdir}/xorg/modules/input/kbd_drv.so
 %attr(755,root,root) %{_libdir}/xorg/modules/input/keyboard_drv.so
-%{_mandir}/man4/kbd.4x*
-%{_mandir}/man4/keyboard.4x*
+%{_mandir}/man4/kbd.4*
+%{_mandir}/man4/keyboard.4*
