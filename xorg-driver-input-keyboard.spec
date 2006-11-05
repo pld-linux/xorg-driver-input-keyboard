@@ -7,6 +7,7 @@ License:	MIT
 Group:		X11/Applications
 Source0:	http://xorg.freedesktop.org/releases/individual/driver/xf86-input-keyboard-%{version}.tar.bz2
 # Source0-md5:	06e14029e00b32ed085769775b398efd
+Source1:	xf86OSKbd.h
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
@@ -30,6 +31,7 @@ interfejs klawiatury udostêpniany przez system operacyjny.
 
 %prep
 %setup -q -n xf86-input-keyboard-%{version}
+[ -f src/xf86OSKbd.h ] && exit 1 || install %{SOURCE1} src/
 
 %build
 %{__libtoolize}
@@ -57,6 +59,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc COPYING ChangeLog
 %attr(755,root,root) %{_libdir}/xorg/modules/input/kbd_drv.so
-%attr(755,root,root) %{_libdir}/xorg/modules/input/keyboard_drv.so
 %{_mandir}/man4/kbd.4*
-%{_mandir}/man4/keyboard.4*
