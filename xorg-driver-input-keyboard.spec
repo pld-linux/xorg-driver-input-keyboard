@@ -1,5 +1,5 @@
 Summary:	X.org keyboard input drivers
-Summary(pl.UTF-8):   Sterowniki wejściowe klawiatury dla X.org
+Summary(pl.UTF-8):	Sterowniki wejściowe klawiatury dla X.org
 Name:		xorg-driver-input-keyboard
 Version:	1.2.0
 Release:	0.2
