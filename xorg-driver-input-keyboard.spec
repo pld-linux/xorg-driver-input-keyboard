@@ -16,7 +16,7 @@ BuildRequires:	xorg-lib-libpciaccess-devel
 BuildRequires:	xorg-proto-inputproto-devel
 BuildRequires:	xorg-proto-kbproto-devel
 BuildRequires:	xorg-proto-randrproto-devel
-BuildRequires:	xorg-util-util-macros >= 0.99.2
+BuildRequires:	xorg-util-util-macros >= 1.3
 BuildRequires:	xorg-xserver-server-devel >= 1.2.99.0
 BuildRequires:  rpmbuild(macros) >= 1.389
 %requires_xorg_xserver_xinput
@@ -58,6 +58,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc COPYING ChangeLog
+%doc COPYING ChangeLog README
 %attr(755,root,root) %{_libdir}/xorg/modules/input/kbd_drv.so
 %{_mandir}/man4/kbd.4*
