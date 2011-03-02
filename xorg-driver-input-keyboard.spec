@@ -12,15 +12,13 @@ BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
-BuildRequires:	xorg-lib-libpciaccess-devel
 BuildRequires:	xorg-proto-inputproto-devel
 BuildRequires:	xorg-proto-kbproto-devel
-BuildRequires:	xorg-proto-randrproto-devel
 BuildRequires:	xorg-util-util-macros >= 1.8
-BuildRequires:	xorg-xserver-server-devel >= 1.2.99.0
+BuildRequires:	xorg-xserver-server-devel >= 1.4
 BuildRequires:	rpmbuild(macros) >= 1.389
 %{?requires_xorg_xserver_xinput}
-Requires:	xorg-xserver-server >= 1.2.99.0
+Requires:	xorg-xserver-server >= 1.4
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
