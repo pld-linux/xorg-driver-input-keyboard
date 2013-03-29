@@ -1,12 +1,12 @@
 Summary:	X.org keyboard input drivers
 Summary(pl.UTF-8):	Sterowniki wejściowe klawiatury dla X.org
 Name:		xorg-driver-input-keyboard
-Version:	1.6.2
-Release:	3
+Version:	1.7.0
+Release:	1
 License:	MIT
 Group:		X11/Applications
 Source0:	http://xorg.freedesktop.org/releases/individual/driver/xf86-input-keyboard-%{version}.tar.bz2
-# Source0-md5:	ec2ea4c3faf5af15f2b3192d84252703
+# Source0-md5:	97387046c5a450ff78793d5da8e66d5e
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
