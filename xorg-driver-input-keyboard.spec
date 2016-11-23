@@ -13,12 +13,12 @@ BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	xorg-proto-inputproto-devel
-BuildRequires:	xorg-proto-kbproto-devel
+BuildRequires:	xorg-proto-xproto-devel
 BuildRequires:	xorg-util-util-macros >= 1.8
-BuildRequires:	xorg-xserver-server-devel >= 1.4
+BuildRequires:	xorg-xserver-server-devel >= 1.10
 BuildRequires:	rpmbuild(macros) >= 1.389
 %{?requires_xorg_xserver_xinput}
-Requires:	xorg-xserver-server >= 1.4
+Requires:	xorg-xserver-server >= 1.10
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
